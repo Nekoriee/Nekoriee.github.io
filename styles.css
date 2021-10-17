@@ -1,10 +1,14 @@
-p, caption {
-    color: darkred;
+p, caption, address, th {
+    color: #d9bdcb;
     font-size: large;
 }
 
+a {
+    color: #a86991;
+}
+
 .navbar {
-    background-color: #fcbe80;
+    background-color: #503d4e;
     margin-bottom: 15px;
 }
 
@@ -14,17 +18,17 @@ p, caption {
 
 .navbar-dropdown-button {
     text-align: center;
-    color: darkred;
+    color: #d9bdcb;
     text-decoration: none;
     width: 150px;
     padding: 20px 0px;
     display: inline-block;
-    background-color: sandybrown;
+    background-color: #644c61;
 }
 
 .navbar-dropdown-button:hover {
-    color: sandybrown;
-    background-color: darkred;
+    color: #d9bdcb;
+    background-color: #950051;
 }
 
 .navbar-dropdown-projects, .navbar-dropdown-links {
@@ -42,16 +46,16 @@ p, caption {
 
 .navbar-dropdown-projects-content a, .navbar-dropdown-links-content a {
     text-align: center;
-    color: darkred;
+    color: #d9bdcb;
     text-decoration: none;
     padding: 12px 16px;
     display: block;
-    background-color: #fcbe80;
+    background-color: #644c61;
 }
 
 .navbar-dropdown-projects-content a:hover, .navbar-dropdown-links-content a:hover {
-    color: sandybrown;
-    background-color: darkred;
+    color: #d9bdcb;
+    background-color: #950051;
 }
 
 .navbar-dropdown-projects:hover .navbar-dropdown-projects-content {
@@ -74,7 +78,7 @@ p, caption {
     float: left;
     margin-right: 15px;
     margin-left: 10px;
-    border-color: #CD214F;
+    border-color: #950051;
     border-width: 5px;
     border-style: solid;
 }
@@ -86,8 +90,8 @@ body {
     background-image: url("images/orange_lines_pattern.png");
 }
 table, th, td {
-    border: 1px solid #CD214F;
-    background-color: #ffda9f;
+    border: 2px solid #950051;
+    background-color: #503d4e;
 }
 table {
     float: right;
