@@ -1,0 +1,114 @@
+p, caption {
+    color: darkred;
+    font-size: large;
+}
+
+.navbar {
+    background-color: #fcbe80;
+    margin-bottom: 15px;
+}
+
+.navbar a {
+    font-size: large;
+}
+
+.navbar-dropdown-button {
+    text-align: center;
+    color: darkred;
+    text-decoration: none;
+    width: 150px;
+    padding: 20px 0px;
+    display: inline-block;
+    background-color: sandybrown;
+}
+
+.navbar-dropdown-button:hover {
+    color: sandybrown;
+    background-color: darkred;
+}
+
+.navbar-dropdown-projects, .navbar-dropdown-links {
+    display: inline-block;
+    position: relative;
+}
+
+.navbar-dropdown-projects-content, .navbar-dropdown-links-content {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.navbar-dropdown-projects-content a, .navbar-dropdown-links-content a {
+    text-align: center;
+    color: darkred;
+    text-decoration: none;
+    padding: 12px 16px;
+    display: block;
+    background-color: #fcbe80;
+}
+
+.navbar-dropdown-projects-content a:hover, .navbar-dropdown-links-content a:hover {
+    color: sandybrown;
+    background-color: darkred;
+}
+
+.navbar-dropdown-projects:hover .navbar-dropdown-projects-content {
+    display: block;
+}
+
+.navbar-dropdown-links:hover .navbar-dropdown-links-content {
+    display: block;
+}
+
+.text-center {
+    text-align: center;
+}
+.content-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.image-avatar {
+    float: left;
+    margin-right: 15px;
+    margin-left: 10px;
+    border-color: #CD214F;
+    border-width: 5px;
+    border-style: solid;
+}
+
+.text-main   {
+    text-align: justify;
+}
+body {
+    background-image: url("images/orange_lines_pattern.png");
+}
+table, th, td {
+    border: 1px solid #CD214F;
+    background-color: #ffda9f;
+}
+table {
+    float: right;
+    margin-top: 5px;
+    margin-left: 15px;
+    margin-right: 10px;
+}
+th, td {
+    padding: 5px;
+}
+address {
+    position: fixed;
+    bottom: 0%;
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
+.audio-area {
+    margin-top: 25px;
+}
+
+.audio-area .audio, .audio-area .video {
+    margin-top: 50px;
+}
