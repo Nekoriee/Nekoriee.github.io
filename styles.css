@@ -116,3 +116,61 @@ address {
 .audio-area .audio, .audio-area .video {
     margin-top: 50px;
 }
+
+.mes-contacts {
+    background-color: #644c61;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 15%;
+    float:left;
+    vertical-align: center;
+    overflow: hidden;
+}
+
+.mes-messages {
+    background-color: #503d4e;
+    padding: 15px;
+    max-height: 600px;
+    overflow: auto;
+}
+
+.mes-main-chat {
+    width: 75%;
+    height: 50%;
+    float: right;
+    margin-right: 2%;
+}
+
+.mes-send-area {
+    float: left;
+    margin-top: 15px;
+    margin-left: 20px;
+}
+
+.mes-message {
+    display: inline-block;
+    background-color: #644c61;
+    padding: 5px;
+}
+
+.mes-message-row {
+    padding-top: 2px;
+    clear: both;
+}
+
+#sent.mes-message {
+    margin-left: 2%;
+    clear: left;
+}
+
+#received.mes-message {
+    float: right;
+    margin-right: 2%
+}
+
+textarea {
+    width: 100%;
+    height: 50%;
+    resize: none;
+    overflow: auto;
+}
