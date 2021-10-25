@@ -118,7 +118,6 @@ address {
 }
 
 .mes-contacts {
-    background-color: #644c61;
     padding-left: 15px;
     padding-right: 15px;
     width: 15%;
@@ -158,12 +157,12 @@ address {
     clear: both;
 }
 
-#sent.mes-message {
+#sen.mes-message {
     margin-left: 2%;
     clear: left;
 }
 
-#received.mes-message {
+#rec.mes-message {
     float: right;
     margin-right: 2%
 }
@@ -173,4 +172,24 @@ textarea {
     height: 50%;
     resize: none;
     overflow: auto;
+}
+
+.mes-contacts a {
+    font-size: large;
+}
+
+.mes-contacts-button {
+    margin-top:5px;
+    text-align: left;
+    color: #d9bdcb;
+    text-decoration: none;
+    width: 150px;
+    padding: 20px 20px;
+    display: inline-block;
+    background-color: #644c61;
+}
+
+.mes-contacts-button:hover {
+    color: #d9bdcb;
+    background-color: #950051;
 }
