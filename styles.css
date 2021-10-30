@@ -193,3 +193,9 @@ textarea {
     color: #d9bdcb;
     background-color: #950051;
 }
+
+#GameWindow {
+    outline: solid 10px #950051;
+    display: block;
+    margin: 2.5% auto;
+}
