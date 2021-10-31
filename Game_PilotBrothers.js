@@ -80,16 +80,25 @@ function redraw() {
     };
 }
 
-canvas.addEventListener('click', function(event) {
-    let x = event.pageX - canvasLeft, y = event.pageY - canvasTop;
-    if (!isFinished()) {
+function drawVictory() {
+    let victoryBG = new Image();
+    victoryBG.src = 'images/Games/PilotBrothers/victory.png';
+    victoryBG.onload = function() {
+        context.drawImage(victoryBG, 0, 0);
+    };
+}
 
+canvas.addEventListener('click', function(event) {
+
+    if (!isFinished()) {
+        let x = event.pageX - canvasLeft, y = event.pageY - canvasTop;
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
                 if (x > switches[i][j].getX() && x < (switches[i][j].getX() + switches[i][j].getImage().width) &&
                     y > switches[i][j].getY() && y < (switches[i][j].getY() + switches[i][j].getImage().height)) {
                     changeSwitchesState(i, j);
                     redraw()
+                    if (isFinished()) setTimeout(drawVictory,500);
                 }
 
             }
