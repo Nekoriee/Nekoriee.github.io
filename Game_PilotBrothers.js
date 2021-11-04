@@ -1,7 +1,9 @@
 const canvas = document.getElementById("GameWindow"),  canvasLeft = canvas.offsetLeft + canvas.clientLeft,
     canvasTop = canvas.offsetTop + canvas.clientTop;
 const context = canvas.getContext("2d");
-const background = new Image()
+const background = new Image(), switchImage_0 = new Image(), switchImage_1 = new Image();
+switchImage_0.src = 'images/Games/PilotBrothers/switch_0.png';
+switchImage_1.src = 'images/Games/PilotBrothers/switch_1.png';
 let switches = [], switches_c;
 
 background.src = 'images/Games/PilotBrothers/background.png';
@@ -11,7 +13,6 @@ background.onload = function() {
 
 function Switch(state_i, x_i, y_i) {
     let state = state_i;
-    let image = new Image();
     let x = x_i;
     let y = y_i;
 
@@ -23,10 +24,6 @@ function Switch(state_i, x_i, y_i) {
         return y;
     }
 
-    this.getImage = function() {
-        return image;
-    }
-
     this.getState = function () {
         return state;
     }
@@ -36,10 +33,8 @@ function Switch(state_i, x_i, y_i) {
     }
 
     this.draw = function() {
-        image.src = 'images/Games/PilotBrothers/switch_' + state + '.png';
-        image.onload = function() {
-            context.drawImage(image, x, y);
-        }
+        if (state == 0) context.drawImage(switchImage_0, x, y);
+        else context.drawImage(switchImage_1, x, y);
     }
 }
 
@@ -51,6 +46,7 @@ function changeSwitchesState(sI, sJ) {
         switches[i][sJ].changeState();
     }
     switches[sI][sJ].changeState();
+    requestAnimationFrame(redraw);
 }
 
 function isFinished() {
@@ -71,7 +67,6 @@ function redraw() {
     background.src = 'images/Games/PilotBrothers/background.png';
     background.onload = function() {
         context.drawImage(background, 0, 0);
-
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
                 switches[i][j].draw();
@@ -94,8 +89,8 @@ canvas.addEventListener('click', function(event) {
         let x = event.pageX - canvasLeft, y = event.pageY - canvasTop;
         for (let i = 0; i < 4; i++) {
             for (let j = 0; j < 4; j++) {
-                if (x > switches[i][j].getX() && x < (switches[i][j].getX() + switches[i][j].getImage().width) &&
-                    y > switches[i][j].getY() && y < (switches[i][j].getY() + switches[i][j].getImage().height)) {
+                if (x > switches[i][j].getX() && x < (switches[i][j].getX() + switchImage_0.width) &&
+                    y > switches[i][j].getY() && y < (switches[i][j].getY() + switchImage_0.height)) {
                     changeSwitchesState(i, j);
                     redraw()
                     if (isFinished()) setTimeout(drawVictory,500);
@@ -104,8 +99,6 @@ canvas.addEventListener('click', function(event) {
             }
         }
     }
-
-
 }, false);
 
 window.onload = function() {
