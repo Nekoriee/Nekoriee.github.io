@@ -141,7 +141,7 @@ function redraw() {
         switch (gameState) {
             case "menu":
                 context.drawImage(background, 0, 0);
-                context.font = "75px Comic Sans";
+                context.font = "75px Comic Sans MS";
                 context.textAlign = "center";
                 context.lineWidth = 8.5;
 
@@ -157,7 +157,7 @@ function redraw() {
 
                 context.strokeText("Start Game", 780/2, 400);
                 context.fillText("Start Game", 780/2, 400);
-                context.font = "50px Comic Sans";
+                context.font = "50px Comic Sans MS";
                 context.lineWidth = 7;
 
                 switch (menuButtons[1]) {
@@ -175,7 +175,7 @@ function redraw() {
                 break;
             default:
                 context.drawImage(background, 0, 0);
-                context.font = "40px Comic Sans";
+                context.font = "40px Comic Sans MS";
                 context.fillStyle = "black";
                 context.textAlign = "left";
                 context.fillText("Score: " + score, 20, 760);
