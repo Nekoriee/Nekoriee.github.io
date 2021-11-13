@@ -3,7 +3,7 @@ const canvas = document.getElementById("GameWindow"),  canvasLeft = canvas.offse
 const context = canvas.getContext("2d");
 const background = new Image();
 const sprites = new Image();
-sprites.src = 'images/Games/WhackAMole/mole_spritesheet.png';
+sprites.src = '/images/Games/WhackAMole/mole_spritesheet.png';
 let burrows = [], burrows_c;
 let menuButtons= ["normal", "normal"];
 const maxMoles = 2; // максимум кротов на экране
@@ -135,8 +135,8 @@ function isFinished() {
 }
 
 function redraw() {
-    if (gameState == "menu") background.src = 'images/Games/WhackAMole/background_menu.png';
-    else background.src = 'images/Games/WhackAMole/background.png';
+    if (gameState == "menu") background.src = '/images/Games/WhackAMole/background_menu.png';
+    else background.src = '/images/Games/WhackAMole/background.png';
     background.onload = function() {
         switch (gameState) {
             case "menu":
