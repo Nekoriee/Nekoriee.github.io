@@ -11,7 +11,7 @@ async function loadImages() {
     images.insertAdjacentHTML('beforeend', `<img src="${json.url_image}" class="content-center">`);
     images.insertAdjacentHTML('beforeend', `<p class="text-center">"Adepti's Abode" - Serious Sam 4</p>`)
 
-    images.insertAdjacentHTML('beforeend', `<img src="${json.base64_image} class="content-center"">`);
+    images.insertAdjacentHTML('beforeend', `<img src="${json.base64_image}" class="content-center">`);
     images.insertAdjacentHTML('beforeend', `<p class="text-center">Лого канала athwart (почти)</p>`)
 }
 
